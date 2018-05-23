@@ -31,7 +31,7 @@ var triviaQuestions = [{
 },{
 	question: "True or false armor dictated most for the outcome of a battle?",
 	answerList: ["True", "False"],
-	answer: 2
+	answer: 1
 }];
 
 //Creates a gifArray for each question
@@ -68,3 +68,64 @@ $('#startOverBtn').on('click', function(){
 	newGame();
 });
 
+//Function for running new game
+
+function newGame(){
+	$('#finalMessage').empty();
+	$('#correctAnswers').empty();
+	$('#incorrectAnswers').empty();
+	$('#unanswered').empty();
+	currentQuestion = 0;
+	correctAnswer = 0;
+	incorrectAnswer = 0;
+	unanswered = 0;
+	newQuestion();
+}
+
+//Function for new question
+
+function newQuestion(){
+	$('#message').empty();
+	$('#correctedAnswer').empty();
+	$('#gif').empty();
+	answered = true;
+	
+	//sets up new questions & answerList
+	$('#currentQuestion').html('Question #'+(currentQuestion+1)+'/'+triviaQuestions.length);
+	$('.question').html('<h2>' + triviaQuestions[currentQuestion].question + '</h2>');
+	for(var i = 0; i < 4; i++){
+		var choices = $('<div>');
+		choices.text(triviaQuestions[currentQuestion].answerList[i]);
+		choices.attr({'data-index': i });
+		choices.addClass('thisChoice');
+		$('.answerList').append(choices);
+	}
+	countdown();
+	//clicking an answer will pause the time and setup answerPage
+	$('.thisChoice').on('click',function(){
+		userSelect = $(this).data('index');
+		clearInterval(time);
+		answerPage();
+	});
+}
+
+//Function for Countdown intiation
+
+function countdown(){
+	seconds = 15;
+	$('#timeLeft').html('<h3>Time Remaining: ' + seconds + '</h3>');
+	answered = true;
+	//sets timer to go down
+	time = setInterval(showCountdown, 1000);
+}
+
+//Function for showing countdown on page
+function showCountdown(){
+	seconds--;
+	$('#timeLeft').html('<h3>Time Remaining: ' + seconds + '</h3>');
+	if(seconds < 1){
+		clearInterval(time);
+		answered = false;
+		answerPage();
+	}
+}
