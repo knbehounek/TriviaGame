@@ -1,3 +1,5 @@
+//Creates the Questions for the Game//
+
 var triviaQuestions = [{
 	question: "The word dragon comes from which greek word?",
 	answerList: ["drako", "draconta", "dagon", "draxo"],
@@ -32,12 +34,37 @@ var triviaQuestions = [{
 	answer: 2
 }];
 
+//Creates a gifArray for each question
+
 var gifArray = ['question1', 'question2', 'question3', 'question4', 'question5', 'question6', 'question7', 'question8', 'question9', 'question10', 'question11', 'question12', 'question13','question14','question15'];
-var currentQuestion; var correctAnswer; var incorrectAnswer; var unanswered; var seconds; var time; var answered; var userSelect;
+
+//Creates need variables for functionality 
+var currentQuestion; 
+var correctAnswer; 
+var incorrectAnswer; 
+var unanswered;
+var seconds; 
+var time; 
+var answered; 
+var userSelect;
 var messages = {
 	correct: "Correct wise one",
 	incorrect: "You have failed.",
 	endTime: "Quest time is all out!",
 	finished: "Alright! Let's see how well you did."
 }
+
+//Creates click event for start of game
+
+$('#startBtn').on('click', function(){
+	$(this).hide();
+	newGame();
+});
+
+//Creates click event for starting game over
+
+$('#startOverBtn').on('click', function(){
+	$(this).hide();
+	newGame();
+});
 
