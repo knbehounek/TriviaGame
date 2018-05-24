@@ -36,7 +36,7 @@ var triviaQuestions = [{
 
 //Creates a gifArray for each question
 
-var gifArray = ['question1', 'question2', 'question3', 'question4', 'question5', 'question6', 'question7', 'question8', 'question9', 'question10', 'question11', 'question12', 'question13','question14','question15'];
+var gifArray = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8'];
 
 //Creates need variables for functionality 
 var currentQuestion; 
