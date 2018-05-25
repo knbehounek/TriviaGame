@@ -5,7 +5,7 @@ var triviaQuestions = [{
 	answerList: ["drako", "draconta", "dagon", "draxo"],
 	answer: 1
 },{
-	question: "True of False Drake, Wyvern, Dragon, and wyrm are all the same?",
+	question: "True of False: Drake, Wyvern, Dragon, and wyrm are all the same?",
 	answerList: ["True", "False"],
 	answer: 1
 },{
@@ -25,11 +25,11 @@ var triviaQuestions = [{
 	answerList: ["Priest", "White Mage", "Paladin", "Warlock"],
 	answer: 3
 },{
-	question: "True or False dragons varied from sizes ranging from chickens to miles long",
+	question: "True or False: dragons varied from sizes ranging from chickens to miles long",
 	answerList: ["True", "False"],
 	answer: 0
 },{
-	question: "True or false armor dictated most for the outcome of a battle?",
+	question: "True or false: armor dictated most for the outcome of a battle?",
 	answerList: ["True", "False"],
 	answer: 1
 }];
@@ -48,7 +48,7 @@ var time;
 var answered; 
 var userSelect;
 var messages = {
-	correct: "Correct wise one",
+	correct: "Correct wise one...",
 	incorrect: "You have failed.",
 	endTime: "Quest time is all out!",
 	finished: "Alright! Let's see how well you did."
