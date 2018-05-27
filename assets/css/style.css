@@ -1,0 +1,51 @@
+body{
+    background: url("D:/Coding Bootcamp/TriviaGame/assets/images/background.jpg");
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+header{
+    text-align: center;
+    color: white;
+    font-size: 65px;
+    height: auto; 
+}
+#startBtn{
+    background-color: #52181d;
+	color: white;
+	font-family: 'Sigmar One', sans-serif;
+	font-size: 30px;
+	padding: 20px;
+	margin-top: 100px;
+}
+
+.btn-primary,.reset{
+	background-color: #52181d;
+	color: white;
+	font-family: 'Sigmar One', sans-serif;
+	font-size: 30px;
+	padding: 20px;
+	margin-top: 100px;
+}
+.btn-primary:hover, .reset:hover{
+	background-color: black;
+}
+
+.container{
+	margin-top: 50px;
+	text-align: center;
+	height: 100%;
+	width: 700px;
+}
+
+
+.thisChoice:hover{
+	background-color: black;
+	color: white;
+	padding: 10px;
+}
+
+#gif{
+	margin: 30px;
+}
