@@ -20,6 +20,17 @@ header{
 	margin-top: 100px;
 }
 
+#currentQuestion, #timeLeft, #question, #message {
+	font-size: 35px;
+}
+
+#answerList {
+	font-size: 24px;
+}
+
+
+
+
 .btn-primary,.reset{
 	background-color: #52181d;
 	color: white;
